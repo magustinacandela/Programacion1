@@ -22,8 +22,8 @@ i=0
 while i<cantParejas:
     print("Pareja", i+1)
     nombresParejas[i]=input("Nombre de la pareja: ")
-    jugador1=int(input("Numero del primer jugador: ")) -1
-    jugador2=int(input("Numero del segundo jugador: ")) -1
+    jugador1=int(input("Numero del primer jugador: "))-1
+    jugador2=int(input("Numero del segundo jugador: "))-1
     if jugador1==jugador2 or jugador1<0 or jugador1>=cantidad or jugador2<0 or jugador2>=cantidad:
         print("Pareja invalida")
     else:
