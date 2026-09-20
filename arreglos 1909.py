@@ -24,7 +24,7 @@ i=0
 while i<cantidad:
     print(i+1, alumnos[i][0])
     i=i+1
-numero=int(input("Numero del alumno a consultar: ")) -1
+numero=int(input("Numero del alumno a consultar: "))-1
 if esRegular(alumnos[numero]):
     print(alumnos[numero][0], "esta regular")
 else:
