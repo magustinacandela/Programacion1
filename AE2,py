@@ -1,0 +1,43 @@
+def mostrar_menu():
+    print("Cajero automatico")
+    print("1. Consultar saldo")
+    print("2. Depositar")
+    print("3. Extraer")
+    print("4. Salir")
+def consultar_saldo(saldo):
+    print("Su saldo actual es: $", saldo)
+def depositar(saldo):
+    importe = float(input("Ingrese el importe a depositar: "))
+    while importe<=0:
+        print("El importe tiene que ser mayor que cero")
+        importe=float(input("Ingrese el importe a depositar: "))
+    saldo=saldo+importe
+    print("El deposito se realizo correctamente y su saldo ahora es: $", saldo)
+    return saldo
+def extraer(saldo):
+    importe=float(input("Ingrese el importe a extraer: "))
+    while importe<=0:
+        print("El importe tiene que ser mayor que cero")
+        importe=float(input("Ingrese el importe a extraer: "))
+    if importe<=saldo:
+        saldo=saldo-importe
+        print("La extracción se realizado correctamente y su saldo ahora es: $", saldo)
+    else:
+        print("El fondo insuficiente y su saldo actual es: $", saldo)
+    return saldo
+def main():
+    saldo=50000
+    while True:
+        mostrar_menu()
+        opcion=int(input("Ingrese una opcion: "))
+        if opcion==1:
+            consultar_saldo(saldo)
+        elif opcion==2:
+            saldo=depositar(saldo)
+        elif opcion==3:
+            saldo=extraer(saldo)
+        elif opcion==4:
+            break
+        else:
+            print("La opción no es valida, ingrese un número del 1 al  4.")
+main()
